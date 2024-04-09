@@ -1,9 +1,9 @@
 const { Dog, Temperament, Country } = require('../db.js');
 const validateDogData = require('../utils/validateDogData.js');
 
-const postDog = async (req, res) => {
+const postDog = async (data) => {
     try {
-        const { name, image, height, weight, life_span, temperaments, origin } = validateDogData(req.body);
+        const { name, image, height, weight, life_span, temperaments, origin } = validateDogData(data);
 
         const [ newDog, created ] = await Dog.findOrCreate({
             where:{
@@ -36,12 +36,12 @@ const postDog = async (req, res) => {
             newDog.addTemperaments(newTemperaments);
             newDog.addCountry(newCountries);
 
-            return res.status(200).json(newDog);
+            return newDog;
         }
-        return res.status(300).send(`La raza de perro ${name} ya existe`)
+        return `La raza de perro ${name} ya existe`;
         
     } catch (error) {
-        return res.status(404).send(error.message);
+        return error.message;
     }
 }
 

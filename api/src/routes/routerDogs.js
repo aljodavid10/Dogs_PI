@@ -3,6 +3,6 @@ const handlerAllDogs = require("../handlers/handlerAllDogs");
 const routerDogs = Router();
 
 
-routerDogs.get("", handlerAllDogs);
+routerDogs.get("/Dogs", handlerNameDogs);
 
 module.exports = routerDogs;

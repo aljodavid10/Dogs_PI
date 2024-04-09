@@ -1,10 +1,8 @@
 const axios = require("axios");
 const getAPIResults = require("./getAPIResults");
 
-const getDogsAPIByByName = async (req, res) => {
+const getDogsAPIByByName = async (nameQuery) => {
     try {
-        const nameQuery = req.query.name;
-
         const resultados = await getAPIResults();
 
         const respuesta = resultados.filter(elemento => {
@@ -25,9 +23,9 @@ const getDogsAPIByByName = async (req, res) => {
                 location: "API"
             })
         }
-        return res.status(200).json(dogsResultado);
+        return dogsResultado;
     } catch (error) {
-        res.status(404).send(error.message);
+        return error.message;
     }
 }
 

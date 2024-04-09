@@ -5,8 +5,8 @@ const handlerAllDogs = async (req, res) => {
     try {
         const respuestaAPI = await getDogsAPI();
         const respuestaDB = await getDogsDB();
-
-        const respuesta = [ ...respuestaAPI, ...respuestaDB];
+        
+        const respuesta = [ ...respuestaDB, ...respuestaAPI];
 
         if(respuesta)
             return res.status(200).json(respuesta);
