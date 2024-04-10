@@ -22,7 +22,7 @@ const { conn } = require('./src/db.js');
 const saveDB = require('./src/utils/saveDB.js');
 
 // Syncing all the models at once.
-conn.sync(/* { force: true } */).then(() => {
+conn.sync({ force: false }).then(() => {
   server.listen(3001, async () => {
     try {
       await saveDB();

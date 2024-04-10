@@ -1,14 +1,10 @@
-const router = require("express").Router(); 
-const getDogsAPI = require('../controllers/getDogsAPI');
-const getDogsAPIByName = require("../controllers/getDogsAPIByName");
-const getDogsDB = require("../controllers/getDogsDB");
-const getDogsDBByName = require("../controllers/getDogsDBByName");
-const getDogsId = require("../controllers/getDogsId");
-const postDog = require("../controllers/postDog");
-const handlerAllDogs = require("../handlers/handlerAllDogs");
-const handlerNameDogs = require("../handlers/handlerNameDogs");
-const routerDogs = require("./routerDogs");
+const router = require("express").Router();
+const routerCountries = require("./route/routerCoutries");
+const routerDogs = require("./route/routerDogs");
+const routerTemperaments = require("./route/routerTemperaments");
 
-router.get("/dogs",handlerNameDogs);
+router.use("/dogs",routerDogs);
+router.use("/countries", routerCountries);
+router.use("/temperaments", routerTemperaments)
 
 module.exports = router;

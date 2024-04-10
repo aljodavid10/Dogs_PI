@@ -20,7 +20,6 @@ const saveDB = async () => {
             const { temperament, origin } = respuesta;
             if(temperament){
                 const arrayTemp = temperament.split(", ");
-                console.log(arrayTemp)
                 
                 arrayTemp.map(temp => {
                     temperaments.push(temp);

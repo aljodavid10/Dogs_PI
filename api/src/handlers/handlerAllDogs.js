@@ -3,6 +3,7 @@ const getDogsDB = require("../controllers/getDogsDB");
 
 const handlerAllDogs = async (req, res) => {
     try {
+        console.log("llego aqui")
         const respuestaAPI = await getDogsAPI();
         const respuestaDB = await getDogsDB();
         
@@ -13,7 +14,7 @@ const handlerAllDogs = async (req, res) => {
         else
             throw new Error("No se recibio respuesta");
     } catch (error) {
-        return res.status(404).send(error.message);
+        return res.status(400).send(error.message);
     }
 }
 

@@ -39,7 +39,7 @@ const getDogsDBByName = async (nameQuery) => {
         
         return modifiedDogs;
     } catch (error) {
-        return error.message;
+        throw new Error(error.message);
     }
 
 }

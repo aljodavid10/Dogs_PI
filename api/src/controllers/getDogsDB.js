@@ -36,7 +36,7 @@ const getDogsDB = async () => {
         }
         return modifiedDogs;
     } catch (error) {
-        return error.message;
+        throw new Error(error.message);
     }
 }
 module.exports = getDogsDB;

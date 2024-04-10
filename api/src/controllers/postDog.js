@@ -17,7 +17,6 @@ const postDog = async (data) => {
         })
         
         if(created){
-            console.log({temperaments, origin})
             const newTemperaments = [];
             const newCountries = [];
 
@@ -36,12 +35,12 @@ const postDog = async (data) => {
             newDog.addTemperaments(newTemperaments);
             newDog.addCountry(newCountries);
 
-            return newDog;
+            return created;
         }
         return `La raza de perro ${name} ya existe`;
         
     } catch (error) {
-        return error.message;
+        throw new Error(error.message);
     }
 }
 

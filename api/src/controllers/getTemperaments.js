@@ -1,14 +1,15 @@
-const { Temperamt } = require('../db.js');
+const { Temperament } = require('../db.js');
 
 const getTemperaments = async () => {
     try {
-        const temperamnts = await Temperamt.findAll();
+        console.log("AQUI")
+        const temperamnts = await Temperament.findAll();
         
         if(temperamnts.length)
                 return temperamnts;
         throw new Error("Temperamentos no encontrados")
     } catch (error) {
-        return error.message;
+        throw new Error(error.message);
     }
 }
 

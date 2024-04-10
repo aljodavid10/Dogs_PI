@@ -8,7 +8,7 @@ const getCountries = async () => {
                 return countries;
         throw new Error("Paises no encontrados");
     } catch (error) {
-        return error.message;
+        throw new Error(error.message);
     }
 }
 

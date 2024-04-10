@@ -25,7 +25,7 @@ const getDogsAPIByByName = async (nameQuery) => {
         }
         return dogsResultado;
     } catch (error) {
-        return error.message;
+        throw new Error(error.message);
     }
 }
 

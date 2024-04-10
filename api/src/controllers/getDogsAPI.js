@@ -21,7 +21,7 @@ const getDogsAPI = async () => {
         }
         return dogs;
     } catch (error) {
-        return error.message;
+        throw new Error(error.message);
     }
 }
 

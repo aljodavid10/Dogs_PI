@@ -1,10 +1,8 @@
 const axios = require("axios");
 const getAPIResults = require("./getAPIResults");
 
-const getDogsId = async (req, res) => {
+const getDogsId = async (idSearch) => {
     try {
-        let resultado = {};
-        const idSearch = req.params.id;
         if(Number(idSearch)){
             const resultados = await getAPIResults();
             const resultadoBusqueda = resultados.find(elemento => elemento.id === Number(idSearch));
@@ -46,11 +44,11 @@ const getDogsId = async (req, res) => {
             }
         }
         if(resultado.id)
-            return res.status(200).json(resultado);
+            return resultado;
         else
-            return res.status(404).send("No se encontro un resultado");
+            throw new Error("No se encontro un resultado");
     } catch (error) {
-        return res.status(404).send(error.message);
+        throw new Error(error.message);
     }
 }
 

@@ -2,7 +2,7 @@ const getDogsAPIByByName = require("../controllers/getDogsAPIByName");
 const getDogsDBByName = require("../controllers/getDogsDBByName");
 const validateDogData = require("../utils/validateDogData");
 
-const handlerNameDogs = async (req, res) => {
+const handlerSearch = async (req, res) => {
     try {
         const { name } = validateDogData(req.query);
 
@@ -16,10 +16,10 @@ const handlerNameDogs = async (req, res) => {
         else
             throw new Error("No se obtuvo respuesta.");
     } catch (error) {
-        return res.status(404).send(error.message);
+        return res.status(400).send(error.message);
     }
     
 
 }
 
-module.exports = handlerNameDogs;
+module.exports = handlerSearch;
