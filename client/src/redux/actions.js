@@ -1,4 +1,4 @@
-import {GET_DOGS, FILTER, FILTER_LOCATION, ORDER} from './actionTypes'
+import {GET_DOGS, FILTER, FILTER_LOCATION, ORDER, ERROR} from './actionTypes'
 
 export const getDogs = (data) => {
     return {
@@ -7,23 +7,31 @@ export const getDogs = (data) => {
     }
 }
 
-export const filterCards = (temperament) => {
+export const filter = (payload) => {
     return {
         type: FILTER,
-        payload:temperament
+        payload
     }
 }
 
-export const filterCardsLocation = (gender) => {
+export const filterCardsLocation = (payload) => {
     return {
         type: FILTER_LOCATION,
-        payload:gender
+        payload
     }
 }
 
-export const orderCards = (orden) => {
+export const orderCards = (payload) => {
     return {
         type:ORDER,
-        payload:orden
+        payload
     }
+}
+
+export const getError = (payload) => {
+    return {
+        type: ERROR,
+        payload
+    }
+    
 }

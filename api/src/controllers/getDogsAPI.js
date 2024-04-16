@@ -1,4 +1,3 @@
-const axios = require("axios");
 const getAPIResults = require("./getAPIResults");
 
 const getDogsAPI = async () => {
@@ -14,7 +13,7 @@ const getDogsAPI = async () => {
                 height: height.metric,
                 weight: weight.metric,
                 life_span,
-                temperament: temperament ? temperament.split(", ") : "sin temperamentos",
+                temperament: temperament ? temperament.split(", ") : ["sin temperamentos"],
                 origin: origin ? origin.split(", ") : "Origen desconocido",
                 location: "API"
             })

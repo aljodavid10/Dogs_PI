@@ -1,11 +1,24 @@
 import React from 'react'
 import "./Cards.css"
-import Card from '../card/Card'
+import Card from "../card/Card"
 
-function Cards() {
+function Cards(props) {
+  
+  const { dogs } = props.dogs;
+
   return (
-    <div>
-      <Card/>
+    <div className='divCards'> 
+      {
+        dogs.map(dog => (
+          <Card
+            key={dog.id}
+            image={dog.image}
+            name={dog.name}
+            temperament={dog.temperament}
+            weight={dog.weight}
+          />
+          ))
+      }
     </div>
   )
 }
