@@ -1,4 +1,5 @@
 import axios from "axios";
+import { getError } from "../redux/actions";
 
 export default async function getTemperaments (dispatch){
     try {
@@ -6,7 +7,7 @@ export default async function getTemperaments (dispatch){
 
         return response.data;
     } catch (error) {
-        const errorMessage = error.response?.data?.message || error.message;
+        const errorMessage = error.response.data
         dispatch(getError(errorMessage));
     }
 }

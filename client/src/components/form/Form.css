@@ -1,0 +1,68 @@
+.formulario-container {
+    background-image: url("https://i.pinimg.com/736x/b6/f7/c4/b6f7c4f2ae41d8a649d18d165422ba5e.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formulario {
+    background-color: #d9e4d146;
+    margin: 12px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 70%;
+    text-align: center;
+  }
+  
+  .lblTitulo {
+    display: block;
+    margin-bottom: 5px;
+    background-color: #1f290941;
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .inData[type="text"] {
+    width: calc(50% - 10px);
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .errores {
+    margin: 5px 10px;
+    color: red;
+  }
+  
+  .errores:hover{
+    background-color: rgba(255, 0, 0, 0.568);
+    width: calc(50% - 10px);
+    margin: 0 auto;
+    color: rgb(255, 252, 252);
+  }
+
+  .select {
+    color: black;
+    margin-bottom: 10px;
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .guardar {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }

@@ -6,10 +6,9 @@ const handlerIDDogs = require("../../handlers/handlerIDDog");
 
 const routerDogs = Router();
 
-
 routerDogs.get("", handlerAllDogs);
-routerDogs.get("/:id", handlerIDDogs);
 routerDogs.get("/search", handlerSearch);
+routerDogs.get("/:id", handlerIDDogs);
 routerDogs.post("", handlerPost);
 
 module.exports = routerDogs;

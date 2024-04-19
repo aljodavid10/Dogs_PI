@@ -3,7 +3,6 @@ const getDogsDB = require("../controllers/getDogsDB");
 
 const handlerAllDogs = async (req, res) => {
     try {
-        console.log("llego aqui")
         const respuestaAPI = await getDogsAPI();
         const respuestaDB = await getDogsDB();
         

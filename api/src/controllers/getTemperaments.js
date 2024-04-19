@@ -3,10 +3,17 @@ const { Temperament } = require('../db.js');
 const getTemperaments = async () => {
     try {
         console.log("AQUI")
-        const temperamnts = await Temperament.findAll();
+        const response = await Temperament.findAll();
         
-        if(temperamnts.length)
-                return temperamnts;
+        if(response.length){
+            const temperaments = response.map(temp => {
+                return {
+                    id: temp.id,
+                    name: temp.name
+                }
+            })
+            return temperaments;
+        }
         throw new Error("Temperamentos no encontrados")
     } catch (error) {
         throw new Error(error.message);

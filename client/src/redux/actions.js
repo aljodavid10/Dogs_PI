@@ -1,4 +1,4 @@
-import {GET_DOGS, FILTER, FILTER_LOCATION, ORDER, ERROR} from './actionTypes'
+import {GET_DOGS, FILTER, FILTER_LOCATION, ORDER, PAGE, ERROR} from './actionTypes'
 
 export const getDogs = (data) => {
     return {
@@ -28,10 +28,16 @@ export const orderCards = (payload) => {
     }
 }
 
+export const getPage = (payload) => {
+    return {
+        type: PAGE,
+        payload
+    }
+}
+
 export const getError = (payload) => {
     return {
         type: ERROR,
         payload
     }
-    
 }

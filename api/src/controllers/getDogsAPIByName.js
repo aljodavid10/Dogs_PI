@@ -18,8 +18,8 @@ const getDogsAPIByByName = async (nameQuery) => {
                 height: height.metric,
                 weight: weight.metric,
                 life_span,
-                temperament: temperament ? temperament.split(", ") : "sin temperamentos",
-                origin: origin ? origin.split(", ") : "Origen desconocido",
+                temperament: temperament ? temperament.split(", ") : ["sin temperamentos"],
+                origin: origin ? origin.split(", ") : ["Origen desconocido"],
                 location: "API"
             })
         }

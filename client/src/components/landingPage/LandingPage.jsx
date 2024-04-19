@@ -14,14 +14,19 @@ export default function LandingPage ({submit}) {
         }
     }, []);
 
-
     return (
-        <div className=''>
+        <div className='landingPage'>
+            <div className="wrapper">
                 <Link to='/home'>
-                    <button className='inicio' onClick={submit}>
-                        Start datos
-                    </button>
+                <button className='inicio' onClick={submit}>
+                    🐾 EMPECEMOS 👣 
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 </Link>
+            </div>
         </div>
     )
 }

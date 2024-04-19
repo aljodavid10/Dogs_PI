@@ -6,7 +6,7 @@ const getAPIResults = async() => {
     try {
         const { data } = await axios.get(`${URL}?api_key=${API_KEY}`);
         const resultados = data;
-        return resultados;    
+        return resultados;
     } catch (error) {
         return error.message;
     }

@@ -3,7 +3,6 @@ const getDogsId = require("../controllers/getDogsId");
 const handlerIDDogs = async (req, res) => {
     try {
         const { id } = req.params;
-        
         const respuesta = await getDogsId(id)
     
         return res.status(200).json(respuesta);

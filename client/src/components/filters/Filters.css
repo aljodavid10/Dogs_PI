@@ -1,0 +1,55 @@
+.botonera {
+    margin-top: 0;
+    width: 100%;
+    background-color: #cccccc34;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .restart {
+    padding-left: 12px;
+    margin-right: 10px;
+  }
+  
+  .btnRestart {
+    margin-top: 12px;
+    padding: 16px 32px;
+    background-color: #5885b6; /* Color del botón */
+    color: white; /* Color del texto */
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .btnRestart:hover {
+    background-color: #0056b3; /* Color del botón al pasar el cursor */
+  }
+  
+  .filtros {
+    margin: 0 auto;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .custom-select {
+    margin-right: 10px; /* Espacio entre los filtros */
+  }
+  
+  select {
+    padding: 8px;
+    border: 1px solid #ccc; /* Borde del select */
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Estilo para el borde del select cuando está enfocado */
+  select:focus {
+    outline: none;
+    border-color: #007bff; /* Color del borde al enfocar */
+  }
+  

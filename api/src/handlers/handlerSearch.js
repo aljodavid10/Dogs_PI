@@ -14,12 +14,10 @@ const handlerSearch = async (req, res) => {
         if(respuesta.length)
             return res.status(200).json(respuesta);
         else
-            throw new Error("No se obtuvo respuesta.");
+            throw new Error(`No se encontro ${name}`);
     } catch (error) {
         return res.status(400).send(error.message);
     }
-    
-
 }
 
 module.exports = handlerSearch;
